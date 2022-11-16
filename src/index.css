@@ -1,0 +1,465 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+a a:hover a:visited a:active{
+	text-decoration: none;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* CSS Variables - colours */
+
+:root {
+	--white: #ffffff;
+	--pink: #FAC5CC;
+	--lightgreen: #A3EABF;
+	--yellow: #FFE882;
+	--lighblue: #C3EBFF;
+	--red: #E70013;
+	--navyblue: #022B52;
+}
+
+/* LOGO DISPLAY */
+
+.logo{
+	display: flex;
+	width: 100%;
+}
+
+/* STYLING HOME PAGE */
+
+.container-cards-home{
+	display: grid;
+	grid-auto-columns: 1fr;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr 1fr; 
+  	gap: 10px 0px;
+	grid-template-areas: 
+	"firstcard secondcard"
+	"thirdcard fourthcard";
+}
+
+.firstcard {
+	grid-area: firstcard;
+}
+
+.secondcard {
+	grid-area: secondcard;
+}
+
+.thirdcard {
+	grid-area: thirdcard;
+}
+
+.fourthcard {
+	grid-area: fourthcard;
+}
+
+.commoncard {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+.pictures-cards-home{
+	width: 80%;
+	height: 100%;
+	position: relative;
+}
+
+.card-title {
+	display: flex;
+	justify-content: center;
+	font-family: montserrat, sans-serif;
+	position: absolute;
+	font-weight: 500;
+	color: var(--white);
+	font-size: 1.2rem;
+	text-shadow: 2px 1px black;
+	z-index: 9999;
+}
+
+.card-frame {
+	width: 30%;
+	height: 23%;
+	display: flex;
+	position: absolute;
+	z-index: 999;
+}
+
+.frame1 {
+	border: 5px solid var(--pink);
+}
+
+.frame2 {
+	border: 5px solid var(--lightgreen);
+}
+
+.frame3 {
+	border: 5px solid var(--yellow);
+}
+
+.frame4 {
+	border: 5px solid var(--lighblue);
+}
+
+.trips-title{
+	font-family: montserrat, sans-serif;
+	font-size: 2rem;
+	margin: 2rem 0 1rem 1rem;
+}
+
+.container-trips-1{
+	margin: auto;
+	display: flex;
+	text-align: left;
+	width: 80%;
+	background-color: var(--navyblue);
+	color: var(--white);
+	padding: 20px 20px;
+	font-family: montserrat, sans-serif;
+	font-size: 1.5rem;
+	text-decoration: none;
+}
+.container-trips-2{
+	margin: auto;
+	margin-top: 1rem;
+	display: flex;
+	text-align: left;
+	justify-content: space-between;
+	width: 80%;
+	background-color: var(--red);
+	color: var(--white);
+	padding: 20px 20px;
+	font-family: montserrat, sans-serif;
+	font-size: 1.5rem;
+	text-decoration: none;
+	border: none;
+}
+
+.descriptioncase {
+	width: 85%;
+}
+
+/* STYLING SUBPAGES */
+
+.title-pages{
+	display: flex;
+	justify-content: center;
+	font-family: montserrat, sans-serif;
+	font-size: 2.5rem;
+	margin-bottom: 1.5rem;
+}
+
+.container-page-events{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+
+.categoryitem-img {
+	width: 90%;
+	height: 300px;
+	object-fit: cover;
+}
+
+.categoryitem-name{
+	display: flex;
+	position: absolute;
+	bottom: 0;
+	z-index: 999;
+	font-family: montserrat, sans-serif;
+	font-size: 1.2rem;
+	color: var(--white);
+	width: 90%;
+}
+
+.container-cards-categories {
+	display: flex;
+	justify-content: center;
+	margin-top: 1em;
+	position: relative;
+}
+
+.shadow{
+	display: flex;
+	position: absolute;
+	background-color: rgb(25.5, 25.5, 25.5, 0.2);
+	z-index: 998;
+	width: 90%;
+	height: 100%;
+}
+
+/* STYLING DESCRIPTION PAGE */
+
+.container-description{
+	position: relative;
+	height: 300px;
+}
+
+.img-description{
+	width: 100%;
+	height: inherit;
+	object-fit: cover;
+	position: absolute;
+}
+
+.title-description{
+	font-family: montserrat, sans-serif;
+	position: absolute;
+	font-size: 2.2rem;
+	color: var(--white);
+	bottom: 10%;
+	margin: 0 0 2rem 1rem;
+	z-index: 999;
+}
+
+.address-description{
+	position: absolute;
+	color: var(--white);
+	font-family: montserrat, sans-serif;
+	font-size: 1.2rem;
+	bottom: 2%;
+	margin: 0 0 1rem 1rem;
+	z-index: 999;
+}
+
+.text-desc-container {
+	width: 100%;
+}
+
+.text-description { 
+	color: #707070;
+	font-family: montserrat, sans-serif;
+	margin: 1rem; 
+	line-height: 1.5rem;
+}
+
+#shadow-description{
+	width: 100%;
+	z-index: 998;
+}
+
+/* YOURTRIP PAGE & DATEPICKER STYLING */
+
+.container-text-yourtrip{
+	display: flex;
+	width: 90%;
+	margin: auto;
+	margin-bottom: 1.5rem;
+}
+
+.text-yourtrip{
+	font-family: montserrat, sans-serif;
+	font-size: 1.4rem;
+}
+
+.datepicker{
+	display: flex;
+	justify-content: center;
+	border: 2px solid lightgray;
+	margin: 0 0.6rem;
+}
+
+/* STYLING SCHEDULE PAGE */
+::-webkit-scrollbar{
+	display: none;
+}
+
+.container-schedule {  
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 0px 0px;
+	grid-auto-flow: row;
+	grid-template-areas:
+	  "title-table title-table title-table title-table"
+	  "thursday-content friday-content saturday-content sunday-content"
+	  "thursday-content friday-content saturday-content sunday-content";
+	overflow-x: scroll;
+}
+
+.date-schedule{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	font-family: montserrat, sans-serif;
+	font-size: 1.5rem;
+	width: 200px;
+	height: 100px;
+	background-color: var(--navyblue);
+	color: var(--white);
+}
+  
+.thursday-content { 
+	grid-area: thursday-content;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	border: 2px solid #707070;
+	border-right: 0;
+}
+
+.content-place-schedule{
+	display: flex;
+	width: 150px;
+	height: 75px;
+	padding-left: 0.5rem;
+	align-items: center;
+	font-family: montserrat, sans-serif;
+	background-color: rgb(163, 234, 191, 0.4);
+	border: 4px solid var(--lightgreen);
+	color: var(--navyblue);
+	margin: 0.5rem 0;
+}
+
+.content-attraction-schedule{
+	display: flex;
+	width: 150px;
+	height: 75px;
+	padding-left: 0.5rem;
+	align-items: center;
+	font-family: montserrat, sans-serif;
+	background-color: rgb(194, 235, 255, 0.4);
+	border: 4px solid var(--lighblue);
+	color: var(--navyblue);
+	margin: 0.5rem 0;
+}
+
+.content-activity-schedule{
+	display: flex;
+	width: 150px;
+	height: 75px;
+	padding-left: 0.5rem;
+	align-items: center;
+	font-family: montserrat, sans-serif;
+	background-color: rgb(255, 232, 130, 0.4);
+	border: 4px solid var(--yellow);
+	color: var(--navyblue);
+	margin: 0.5rem 0;
+}
+
+.content-event-schedule{
+	display: flex;
+	width: 150px;
+	height: 75px;
+	padding-left: 0.5rem;
+	align-items: center;
+	font-family: montserrat, sans-serif;
+	background-color: rgb(250, 197, 204, 0.4);
+	border: 4px solid var(--pink);
+	color: var(--navyblue);
+	margin: 0.5rem 0;
+}
+  
+.friday-content { 
+	grid-area: friday-content; 
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	border: 2px solid #707070;
+	border-right: 0;
+}
+  
+.saturday-content { 
+	grid-area: saturday-content; 
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	border: 2px solid #707070;
+	border-right: 0;
+}
+  
+.sunday-content { 
+	grid-area: sunday-content; 
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	border: 2px solid #707070;
+}
+
+
+/* Back button styling */
+
+.backbutton {
+	border: none;
+	background-color: transparent;
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	z-index: 999999;
+}
+
+/* Toaster styling */
+
+.toaster {
+	font-family: montserrat, sans-serif;
+	font-size: 1.3em;
+}
+
+/* Other styling for Your Trip Page */
+
+.edittrip {
+	justify-content: space-between;
+	margin-bottom: 1em;
+}
+
+.time-placeholder {
+	width: 85%;
+	margin: auto;
+	margin-top: 1.5em;
+	margin-bottom: 2em;
+}
+
+.time-placeholder-inner {
+	font-family: montserrat, sans-serif;
+	font-size: 1.3em;
+}
+
+.datepicker {
+	font-family: montserrat, sans-serif;
+}
